@@ -17,6 +17,8 @@ use std::{collections::HashMap, ops::Deref, str::FromStr, sync::Arc};
 use tokio::sync::RwLock;
 #[tokio::main]
 async fn main() -> eyre::Result<()> {
+
+
     tracing_subscriber::fmt::init();
     let rpc_endpoint = std::env::var("ETHEREUM_RPC_ENDPOINT")?;
     let ws_endpoint = std::env::var("ETHEREUM_WS_ENDPOINT")?;
